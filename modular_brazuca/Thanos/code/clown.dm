@@ -69,7 +69,7 @@
 	name = "Clown Stone: Party Popper"
 	desc = "Gib yourself and heal <b>everyone</b> around you, even the dead."
 	action_icon_state = "partypop"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "clown"
 	charge_max = 0
 
@@ -94,7 +94,7 @@
 	name = "Clown Stone: Prankster's Delusion"
 	desc = "Causes those around you to see others as a clumsy clown (or maybe a gondola)! Now how will they know who is who?"
 	action_icon_state = "prankstersdelusion"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "clown"
 	charge_max = 750
 
@@ -113,7 +113,7 @@
 	desc = "Summon a 6x6 dance floor, and dance to heal everyone around you (but yourself)!"
 	charge_max = 1000
 	action_icon_state = "honksong"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "clown"
 	var/list/dancefloor_turfs
 	var/list/dancefloor_turfs_types
@@ -314,7 +314,7 @@
 	name = "Clown Stone: Let There Be Cake!"
 	desc = "Summon a powerful cake at your feet, capable of healing those who eat it, and injuring those who are hit by it. <b>Only 2 cakes can exist at the same time.</b>"
 	action_icon_state = "cake"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "clown"
 	charge_max = 350
 	var/list/cakes = list()
@@ -366,7 +366,7 @@
 	name = "Clown Stone: THANOS CAR"
 	desc = "Summon the legendary THANOS CAR!"
 	action_icon_state = "_thanoscar"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "clown"
 	invocation_type = "shout"
 	invocation = "THANOS CAR THANOS CAR"
@@ -377,7 +377,7 @@
 	var/obj/vehicle/sealed/car/thanos/thanos_car = new(get_turf(user))
 	thanos_car.mob_forced_enter(user, TRUE)
 	addtimer(CALLBACK(thanos_car, /obj/vehicle/sealed/car/thanos.proc/ByeBye), 15 SECONDS)
-	
+
 
 ///////////////////////////////////////
 //////// THANOS CAR THANOS CAR ////////
@@ -386,7 +386,7 @@
 /obj/vehicle/sealed/car/thanos
 	name = "THANOS CAR"
 	desc = "THANOS CAR THANOS CAR"
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	icon_state = "thanoscar"
 	color = "#6F3C89"
 	max_integrity = 45

@@ -4,7 +4,7 @@
 	name = "Ghost Stone"
 	desc = "Salts your food very well."
 	color = "#e429f2"
-	ability_text = list("HELP INTENT: Transmutate ghosts into a random simplemob.", 
+	ability_text = list("HELP INTENT: Transmutate ghosts into a random simplemob.",
 		"DISARM INTENT: Fire a bolt that scales based on how many ghosts orbit you.")
 	stone_type = GHOST_STONE
 	spell_types = list(/obj/effect/proc_holder/spell/targeted/infinity/cluwne_rise_up,
@@ -85,13 +85,13 @@
 
 /obj/item/badmin_stone/ghost/proc/ghost_check()
 	var/list/mob/dead/observer/current_spirits = list()
-	
+
 	recursive_orbit_collect(src, current_spirits)
 	recursive_orbit_collect(loc, current_spirits)
 	var/mob/living/L = recursive_loc_check(src, /mob/living)
 	if(L)
 		recursive_orbit_collect(L, current_spirits)
-	
+
 	for(var/i in spirits - current_spirits)
 		var/mob/dead/observer/G = i
 		G.invisibility = GLOB.observer_default_invisibility
@@ -99,7 +99,7 @@
 	for(var/i in current_spirits)
 		var/mob/dead/observer/G = i
 		G.invisibility = 0
-	
+
 	spirits = current_spirits
 	return length(spirits)
 
@@ -115,7 +115,7 @@
 	name = "Ghost Stone: The Chariot"
 	desc = "Open up an unconscious soul to ghosts, ripe for the stealing! They are not loyal to you, however."
 	action_icon_state = "chariot"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "ghost"
 	charge_max = 200
 
@@ -173,7 +173,7 @@
 	name = "Ghost Stone: Heaven's Fortress"
 	desc = "Summon a massive fortress to keep people in, and keep them out."
 	action_icon_state = "fortress"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "ghost"
 	charge_max = 1200
 
@@ -187,7 +187,7 @@
 	name = "Ghost Stone: Soulscreech"
 	desc = "A loud screech that interacts with people's souls in varying ways."
 	action_icon_state = "reeeeee"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "ghost"
 	charge_max = 900
 	sound = 'hippiestation/sound/effects/horror_scream.ogg'
@@ -228,7 +228,7 @@
 	name = "Ghost Stone: Scrying Detachment"
 	desc = "Detach your soul from your body, going into the realm of the ghosts."
 	action_icon_state = "scrying"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "ghost"
 
 /obj/effect/proc_holder/spell/self/infinity/scrying_orb/cast(list/targets, mob/user)
@@ -240,7 +240,7 @@
 	name = "Ghost Stone: Cluwne Rise"
 	desc = "Rise a corpse as a subservient, magical cluwne. You may only have 1 magical cluwne alive."
 	action_icon_state = "cluwnerise"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "ghost"
 	charge_max = 900
 	var/list/cluwnes = list() // one cluwne per user
@@ -289,9 +289,9 @@
 /obj/effect/proc_holder/spell/targeted/conjure_item/spellpacket/sandmans_dust
 	name = "Ghost Stone: Sandman's Dust"
 	desc = "Gives you dust capable of knocking out most people."
-	action_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_icon_state = "sandman"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "ghost"
 	invocation = "POCKET SAND"
 	invocation_type = "shout"

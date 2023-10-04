@@ -8,9 +8,9 @@
 	spell_types = list (/obj/effect/proc_holder/spell/spacetime_dist/supermatter_stone)
 	gauntlet_spell_types = list(/obj/effect/proc_holder/spell/targeted/tesla/supermatter_stone,
 		/obj/effect/proc_holder/spell/targeted/infinity/delamination)
-	ability_text = list("HELP INTENT: Fire a short-range, burning-hot crystal spray", 
+	ability_text = list("HELP INTENT: Fire a short-range, burning-hot crystal spray",
 		"GRAB INTENT: Fire a long-range, rapid, but low damage volt ray",
-		"DISARM INTENT: Fire a short-range fire blast that knocks people back.", 
+		"DISARM INTENT: Fire a short-range fire blast that knocks people back.",
 		"Use on a material to use 25 sheets of it for a golem. 2 minute cooldown!")
 	var/next_golem = 0
 
@@ -82,19 +82,19 @@
 /obj/effect/proc_holder/spell/spacetime_dist/supermatter_stone
 	name = "Supermatter Stone: Reality Distortion"
 	desc = "Bend reality until it's unrecognizable for a short time."
-	action_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_icon_state = "reality"
 	clothes_req = FALSE
 	human_req = FALSE
 	staff_req = FALSE
 	invocation_type = "none"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "sm"
 
 /obj/effect/proc_holder/spell/targeted/infinity/delamination
 	name = "Supermatter Stone: Delamination!"
 	desc = "After 3 seconds, put a marker on someone, which will EXPLODE after 15 seconds!"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "sm"
 
 /obj/effect/proc_holder/spell/targeted/infinity/delamination/InterceptClickOn(mob/living/caller, params, atom/t)
@@ -191,7 +191,7 @@
 	desc = "Charge up an arc of supermatter-amped electricity"
 	action_icon = 'icons/obj/supermatter.dmi'
 	action_icon_state = "darkmatter_glow"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "sm"
 	human_req = FALSE
 	clothes_req = FALSE

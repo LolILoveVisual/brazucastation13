@@ -43,6 +43,22 @@
 /obj/item/ammo_storage/magazine/mc9mm/empty
 	starting_ammo = 0
 
+/obj/item/ammo_storage/magazine/spberetta
+	name = "magazine (9mm)"
+	desc = "Magazine da arma do spooky"
+	icon = 'modular_brazuca/Armas/icons/spberetta.dmi'
+	icon_state = "magazine"
+	caliber = MM9
+	origin_tech = Tc_COMBAT + "=2"
+	ammo_type = "/obj/item/ammo_casing/c9mm"
+	max_ammo = 16
+	exact = 0
+	sprite_modulo = 16
+	multiple_sprites = 1
+
+/obj/item/ammo_storage/magazine/spberetta/empty
+	starting_ammo = 0
+
 /obj/item/ammo_storage/magazine/beretta
 	name = "Beretta 92FS magazine (9mm)"
 	desc = "A magazine designed for the Beretta 92FS. Holds 15 rounds."

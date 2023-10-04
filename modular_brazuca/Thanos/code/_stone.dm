@@ -2,7 +2,7 @@
 
 /obj/item/badmin_stone
 	name = "Generic Stone"
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	icon_state = "stone"
 	w_class = WEIGHT_CLASS_SMALL
 	var/mob/living/current_holder
@@ -32,7 +32,7 @@
 	AddComponent(/datum/component/stationloving, TRUE)
 	START_PROCESSING(SSobj, src)
 	GLOB.poi_list |= src
-	aura_overlay = mutable_appearance('hippiestation/icons/obj/infinity.dmi', "aura", -MUTATIONS_LAYER)
+	aura_overlay = mutable_appearance('modular_brazuca/Thanos/icons/infinity.dmi', "aura", -MUTATIONS_LAYER)
 	aura_overlay.color = color
 	notify_ghosts("\The [src] has been formed!",
 		enter_link="<a href=?src=[REF(src)];orbit=1>(Click to orbit)</a>",
@@ -47,7 +47,7 @@
 /obj/item/badmin_stone/Destroy()
 	GLOB.poi_list -= src
 	STOP_PROCESSING(SSobj, src)
-	return ..()		
+	return ..()
 
 /obj/item/badmin_stone/examine(mob/user)
 	. = ..()
@@ -86,7 +86,7 @@
 		for(var/obj/effect/proc_holder/spell/A in stone_spells)
 			L.mob_spell_list += A
 			A.action.Grant(L)
-			
+
 /obj/item/badmin_stone/proc/RemoveAbilities(mob/living/L, gauntlet = FALSE)
 	for(var/obj/effect/proc_holder/spell/A in spells)
 		L.mob_spell_list -= A
@@ -134,7 +134,7 @@
 			current_holder = new_holder
 		else
 			current_holder = null
-	if (new_aura_holder != last_holder && isliving(new_aura_holder)) 
+	if (new_aura_holder != last_holder && isliving(new_aura_holder))
 		log_game("[src] has a new holder: [ADMIN_LOOKUPFLW(new_aura_holder)]!")
 		message_admins("[src] has a new holder: [key_name(new_aura_holder)]!")
 	if (new_aura_holder != aura_holder)
@@ -214,7 +214,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 /obj/effect/proc_holder/spell/self/infinity
-	action_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	human_req = FALSE // because a monkey with an infinity stone is funny
 	clothes_req = FALSE
 	staff_req = FALSE
@@ -222,7 +222,7 @@
 	invocation_type = "none"
 
 /obj/effect/proc_holder/spell/targeted/infinity //copypaste from shadowling
-	action_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	ranged_mousepointer = 'icons/effects/cult_target.dmi'
 	human_req = FALSE
 	clothes_req = FALSE

@@ -55,7 +55,7 @@
 	name = "Lag Stone: Doppelgangers"
 	desc = "Summon a bunch of (harmless) look-alikes of you!"
 	action_icon_state = "doppelganger"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "lag"
 	charge_max = 1800
 	var/amt = 4
@@ -80,7 +80,7 @@
 /obj/effect/proc_holder/spell/self/infinity/shuffle
 	name = "Lag Stone: The Shuffle"
 	desc = "Swap everyone in your view's position!"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "lag"
 	charge_max = 750
 
@@ -101,9 +101,9 @@
 /obj/effect/proc_holder/spell/aoe_turf/conjure/timestop/lag_stone
 	name = "Lag Stone: Summon Lag"
 	desc = "Summon a large bout of lag within a 5-tile radius. Very infuriating. Badmin Stone holders are immune, however."
-	action_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_icon_state = "lagfield"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "lag"
 	summon_type = list(/obj/effect/timestop/wizard/lag_stone)
 	clothes_req = FALSE
@@ -140,7 +140,7 @@
 	eyeblur = 15
 	stamina = 5
 	nodamage = FALSE
-	
+
 /obj/item/projectile/magic/lag_stone/on_hit(atom/target, blocked = FALSE)
 	. = ..()
 	if(isliving(target))

@@ -45,7 +45,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 
 /obj/item/badmin_gauntlet
 	name = "Badmin Gauntlet"
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	/*
 	lefthand_file = 'hippiestation/icons/mob/inhands/lefthand.dmi'
 	righthand_file = 'hippiestation/icons/mob/inhands/righthand.dmi' */
@@ -71,7 +71,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	START_PROCESSING(SSobj, src)
 	AddComponent(/datum/component/spell_catalyst)
 	martial_art = new
-	flashy_aura = mutable_appearance('hippiestation/icons/obj/infinity.dmi', "aura", -MUTATIONS_LAYER)
+	flashy_aura = mutable_appearance('modular_brazuca/Thanos/icons/infinity.dmi', "aura", -MUTATIONS_LAYER)
 	update_icon()
 	spells += new /obj/effect/proc_holder/spell/self/infinity/regenerate
 	spells += new /obj/effect/proc_holder/spell/self/infinity/shockwave
@@ -156,7 +156,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 			var/mob/living/L = M
 			addtimer(CALLBACK(L, /mob/living.proc/overlay_fullscreen, "thanos_snap", /obj/screen/fullscreen/thanos_snap), 10)
 			addtimer(CALLBACK(L, /mob/living.proc/clear_fullscreen, "thanos_snap"), 35)
-	var/list/eligible_mobs = list()	
+	var/list/eligible_mobs = list()
 	for(var/mob/living/L in GLOB.mob_living_list)
 		if(L.stat == DEAD || !L.ckey || L == snapper)
 			continue
@@ -322,14 +322,14 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 	cut_overlays()
 	var/index = 1
 	if(stone_mode)
-		var/image/veins = image(icon = 'hippiestation/icons/obj/infinity.dmi', icon_state = "glow-overlay")
+		var/image/veins = image(icon = 'modular_brazuca/Thanos/icons/infinity.dmi', icon_state = "glow-overlay")
 		veins.color = GetStoneColor(stone_mode)
 		add_overlay(veins)
 	for(var/obj/item/badmin_stone/IS in stones)
 		var/I = index
 		if(IS.stone_type == stone_mode)
 			I = 0
-		var/image/O = image(icon = 'hippiestation/icons/obj/infinity.dmi', icon_state = "[I]-stone")
+		var/image/O = image(icon = 'modular_brazuca/Thanos/icons/infinity.dmi', icon_state = "[I]-stone")
 		O.color = IS.color
 		add_overlay(O)
 		index++
@@ -613,7 +613,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 		IM.color = I.color
 		gauntlet_radial[I.stone_type] = IM
 	if(!GetStone(SYNDIE_STONE))
-		gauntlet_radial["none"] = image(icon = 'hippiestation/icons/obj/infinity.dmi', icon_state = "none")
+		gauntlet_radial["none"] = image(icon = 'modular_brazuca/Thanos/icons/infinity.dmi', icon_state = "none")
 	var/chosen = show_radial_menu(user, src, gauntlet_radial)
 	if(chosen)
 		if(chosen == "none")
@@ -986,7 +986,7 @@ GLOBAL_VAR_INIT(telescroll_time, 0)
 
 /obj/effect/dummy/phased_mob/spell_jaunt/infinity
 	name = "shadow"
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	icon_state = "shadow"
 	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	invisibility = 0

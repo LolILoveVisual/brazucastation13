@@ -52,7 +52,7 @@
 
 /obj/effect/proc_holder/spell/self/infinity/shockwave/syndie_stone
 	name = "Syndie Stone: Shockwave"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "syndie"
 	action_icon_state = "stomp"
 	range = 8
@@ -60,14 +60,14 @@
 /obj/effect/proc_holder/spell/self/infinity/regenerate/syndie
 	name = "Syndie Stone: Regenerate"
 	desc = "Regenerate 5 health per second. Requires you to stand still."
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "syndie"
 	default_regen = 5
 
 /obj/effect/proc_holder/spell/self/infinity/syndie_bullcharge
 	name = "Syndie Stone: Bull Charge"
 	desc = "Imbue yourself with power, and charge forward, smashing through anyone or anything in your way!"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "syndie"
 	action_icon_state = "charge"
 	charge_max = 200
@@ -97,7 +97,7 @@
 	desc = "Change your defense focus -- tank melee, tank ballistics, or tank energy."
 	action_icon = 'icons/effects/effects.dmi'
 	action_icon_state = "shield1"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "syndie"
 	charge_max = 15 SECONDS
 
@@ -105,7 +105,7 @@
 	name = "Syndie Stone: Super Jump"
 	desc = "Leap across the station to wherever you'd like!"
 	action_icon_state = "jump"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "syndie"
 	charge_max = 300
 
@@ -222,7 +222,7 @@
 	if(super_leaping)
 		return
 	return ..()
-	
+
 /mob/living/carbon/prevent_content_explosion()
 	return super_leaping || ..()
 

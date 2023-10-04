@@ -5,10 +5,10 @@
 	desc = "Stare into the abyss, and the abyss stares back..."
 	color = "#266ef6"
 	stone_type = BLUESPACE_STONE
-	ability_text = list("HELP INTENT: teleport target to safe location. Only works every 75 seconds.", 
-		"GRAB INTENT: teleport to specified location", 
+	ability_text = list("HELP INTENT: teleport target to safe location. Only works every 75 seconds.",
+		"GRAB INTENT: teleport to specified location",
 		"DISARM INTENT: steal item someone is holding")
-	spell_types = list(/obj/effect/proc_holder/spell/self/infinity/bluespace_stone_shield, 
+	spell_types = list(/obj/effect/proc_holder/spell/self/infinity/bluespace_stone_shield,
 		/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/bluespace_stone)
 	var/next_help = 0
 
@@ -19,7 +19,7 @@
 		if(O && !istype(O, /obj/item/badmin_stone) && !istype(O, /obj/item/badmin_gauntlet) && L.dropItemToGround(O))
 			L.visible_message("<span class='danger'>[L]'s [O] disappears from their hands!</span>", "<span class='danger'>Our [O] disappears!</span>")
 			O.forceMove(get_turf(user))
-			user.equip_to_slot(O, ITEM_SLOT_BACKPACK)	
+			user.equip_to_slot(O, ITEM_SLOT_BACKPACK)
 			user.changeNext_move(CLICK_CD_CLICK_ABILITY)
 
 /obj/item/badmin_stone/bluespace/HelpEvent(atom/target, mob/living/user, proximity_flag)
@@ -33,7 +33,7 @@
 			do_teleport(target, potential_T, channel = TELEPORT_CHANNEL_BLUESPACE)
 			next_help = world.time + 75 SECONDS
 
-/obj/item/badmin_stone/bluespace/GrabEvent(atom/target, mob/living/user, proximity_flag)	
+/obj/item/badmin_stone/bluespace/GrabEvent(atom/target, mob/living/user, proximity_flag)
 	var/turf/to_teleport = get_turf(target)
 	if(do_after(user, 3, target = user))
 		var/turf/start = get_turf(user)
@@ -52,7 +52,7 @@
 	name = "Bluespace Stone: Portal Shield"
 	desc = "Summon a portal shield which sends all projectiles into nullspace. Lasts for 15 seconds, or 5 hits."
 	charge_max = 200
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "bluespace"
 
 /obj/effect/proc_holder/spell/self/infinity/bluespace_stone_shield/cast(list/targets, mob/user = usr)
@@ -70,7 +70,7 @@
 	antimagic_allowed = TRUE
 	jaunt_duration = 100
 	invocation_type = "none"
-	action_background_icon = 'hippiestation/icons/obj/infinity.dmi'
+	action_background_icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	action_background_icon_state = "bluespace"
 
 /obj/effect/proc_holder/spell/targeted/ethereal_jaunt/bluespace_stone/cast(list/targets,mob/user = usr)
@@ -84,7 +84,7 @@
 
 /obj/item/shield/bluespace_stone
 	name = "bluespace energy shield"
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
 	icon_state = "portalshield"

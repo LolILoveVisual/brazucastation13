@@ -66,7 +66,7 @@
 /obj/item/tank/jetpack/ganypack
 	name = "Ganypack"
 	desc = "An alien-made jetpack, capable of infinite spaceflight."
-	icon = 'hippiestation/icons/obj/infinity.dmi'
+	icon = 'modular_brazuca/Thanos/icons/infinity.dmi'
 	icon_state = "ganypack"
 	item_state = "flightpack_off"
 	gas_type = null
